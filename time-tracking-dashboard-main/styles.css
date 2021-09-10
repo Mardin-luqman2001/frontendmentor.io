@@ -1,3 +1,7 @@
+html{
+    color: #fff;
+}
+
 .main__container{
     display: flex;
     justify-content: center;
@@ -17,6 +21,10 @@
     width: 30%;
 }
 
+.profile__frequency{
+    background-color: hsl(235, 46%, 20%);
+}
+
 .stats__header{
     display: flex;
     justify-content: space-between;
@@ -26,8 +34,6 @@
     height: 100%;
 }
 
-.testt{
-    display: flex;
-  flex-direction: column;
-  justify-content: center;
+.stats__container{
+    background-color : hsl(235, 46%, 20%);
 }
