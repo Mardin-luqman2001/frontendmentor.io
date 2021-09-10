@@ -1,0 +1,15 @@
+.main__container{
+    display: flex;
+}
+
+.profile__container{
+    display: flex;
+    flex-direction: column;
+}
+
+.profile__content{}
+
+.stats__header{
+    display: flex;
+    justify-content: space-between;
+}
