@@ -1,5 +1,7 @@
 .main__container{
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .profile__container{
@@ -7,9 +9,25 @@
     flex-direction: column;
 }
 
-.profile__content{}
+.profile__content{
+    background-color: hsl(246, 80%, 60%);
+}
+
+.profile__content img{
+    width: 30%;
+}
 
 .stats__header{
     display: flex;
     justify-content: space-between;
+}
+
+.stats__header img{
+    height: 100%;
+}
+
+.testt{
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
