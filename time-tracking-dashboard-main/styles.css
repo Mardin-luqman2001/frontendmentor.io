@@ -22,23 +22,29 @@ html {
 
 .profile__content img {
     width: 30%;
-    padding: 15px;
+    padding: 20px;
     -webkit-filter: drop-shadow(2px 2px 0 white) drop-shadow(-2px 2px 0 white) drop-shadow(2px -2px 0 white) drop-shadow(-2px -2px 0 white);
     filter: drop-shadow(2px 2px 0 white) drop-shadow(-2px 2px 0 white) drop-shadow(2px -2px 0 white) drop-shadow(-2px -2px 0 white);
 }
 
 .profile__content p {
-    margin-left: 15px;
+    margin-left: 20px;
 }
 
 .profile__content>*:nth-child(2) {
     font-weight: 300;
-    font-size: small;
+    font-size: smaller;
 }
 
 .profile__content>*:nth-child(3) {
     font-weight: 300;
     font-size:xx-large;
+}
+
+.profile__frequency p {
+    margin-left: 20px;
+    font-weight: 300;
+    font-size: small;
 }
 
 .profile__frequency {
