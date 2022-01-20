@@ -10,16 +10,22 @@
 }
 
 body {
-    display: flex;
     flex-direction: row;
-    width: 100%;
-    height: 100vh;
-    justify-content: flex-start;
-    align-items: center;
+    /* width: 100%;
+    height: 100vh; */
+   
     color: var(--darkBlue);
     background: url("images/pattern-curve.svg");
     background-repeat: no-repeat;
     background-position: left bottom;
+    user-select: none;
+}
+
+.main-box{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 8em auto;
 }
 
 .testimonial-box {
@@ -61,13 +67,14 @@ body {
     position: absolute;
     left: 0;
     transform: translate(70px, 70px);
+    box-shadow: 30px 20px 40px -15px #1d1d1d;
 }
 
 blockquote {
     font-size: 32px;
 }
 
-h3 span {
+#designation {
     color: var(--grayishBlue);
 }
 
@@ -81,7 +88,11 @@ h3 span {
 .button div {
     padding: 1em 1.5em;
     background-color: white;
-    box-shadow: 3px 3px 10px #cac9c9;
+    /* box-shadow: 0px 8px 20px 2px #a09f9f; */
+}
+
+.button div:hover{
+    cursor: pointer;
 }
 
 .prev-btn {
@@ -92,4 +103,9 @@ h3 span {
 .next-btn {
     border-top-right-radius: 1.5em;
     border-bottom-right-radius: 1.5em;
+}
+
+.name-box{
+    display: flex;
+    gap: 0.5em;
 }
