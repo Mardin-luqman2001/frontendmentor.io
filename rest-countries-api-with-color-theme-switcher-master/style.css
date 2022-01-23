@@ -1,0 +1,37 @@
+:root{
+    --veryLightGray : hsl(0, 0%, 98%);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: white;
+}
+
+.header{
+    position : fixed;
+    display: flex;
+    padding: 2em;
+    align-items: center;
+    justify-content:space-between;
+    width: 95vw;
+    background-color: var(--veryLightGray);
+    box-shadow: 10px 10px 10px -5px #dfdede;
+}
+
+.header h2{
+}
+
+.dark-mode-box{
+    display: flex;
+    align-items: center;
+}
+
+.dark-mode-box p{
+    margin-left: 0.5em;
+}
