@@ -95,6 +95,8 @@ search.addEventListener('keyup', function(e) {
     const searchTerm = e.target.value.toLowerCase();
     const countries = document.getElementsByTagName('h3');
 
+    document.getElementById('regions').selectedIndex = 0;
+
     Array.from(countries).forEach(function(country){
         if(country.innerText.toLowerCase().indexOf(searchTerm)!=-1){
             country.parentElement.style.display = "block"; 
@@ -107,6 +109,8 @@ search.addEventListener('keyup', function(e) {
 function selectRegions(){
     const list = document.getElementById('regions');
     debugger
+
+    document.getElementById('search').value = "";
 
     const selected_region = list.options[list.selectedIndex].text.toLowerCase();
 
