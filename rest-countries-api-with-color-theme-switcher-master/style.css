@@ -61,7 +61,7 @@ body{
 
 .main{
     position: relative;
-    display: none;
+    /* display: none; */
     /* top: 5em; */
 }
 
@@ -146,7 +146,7 @@ body{
 .details-grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-top: 6em;
+    margin-top: 3em;
     /* justify-items: center; */
 }
 
@@ -206,12 +206,13 @@ body{
 
 .neighboring-countries{
     list-style: none;
-    display: flex;
+    display: contents;
     gap: 1em;
 }
 
 .border-countries-box{
     font-weight: bold;
+    margin-top: 1em;
 }
 
 .neighboring-countries > li {
@@ -219,4 +220,18 @@ body{
     border-radius: 2px;
     padding: 0.25em 1em;
     align-self: center;
+}
+
+.neighboring-countries > li:hover {
+    cursor: pointer;
+}
+
+.details-section{
+    display: none;
+}
+
+.back-btn{
+    padding: 1em 4em;
+    margin: 1.5em;
+    border: 0px;
 }
