@@ -10,17 +10,18 @@
 
 body{
     font-family: 'Nunito Sans', sans-serif;
-    background-color: white;
+    background-color: var(--veryLightGray);
 }
 
 .header{
-    position : fixed;
+    position : sticky;
+    height: 1em;
     display: flex;
     padding: 2em;
     align-items: center;
     justify-content:space-between;
-    width: 95vw;
-    background-color: var(--veryLightGray);
+    /* width: 95vw; */
+    background-color: white;
     box-shadow: 10px 10px 10px -5px #dfdede;
 }
 
@@ -35,4 +36,63 @@ body{
 .dark-mode-box p{
     margin-left: 0.5em;
     font-weight: 600;
+}
+
+.main{
+    position: relative;
+    /* top: 5em; */
+}
+
+.input-form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: yellowgreen; */
+    
+}
+
+.input-form select{
+    margin-right: 3em;
+    margin-top: 3em;
+    padding: 1em;
+}
+
+.input-form input{
+    margin-top: 3em;
+    margin-left: 3em;
+    padding: 1em 6em 1em 1em;
+}
+
+.flag{
+    width: 18rem;
+    height: 12rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.countries-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+    gap: 3rem;    
+}
+
+.country-item{
+    width: 18rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 10px 10px 10px -5px #dfdede;
+}
+
+.country-item h3{
+    padding: 1rem;
+}
+
+.country-item ul{
+    list-style-type: none;
+    /* background-color: yellowgreen; */
+    padding: 1rem;
 }
