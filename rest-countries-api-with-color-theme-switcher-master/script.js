@@ -36,9 +36,9 @@ fetchCountries = async () => {
         var c_box = document.querySelector('#countries-box');
         c_box.appendChild(div);
 
-            if(i===10){
-                return;
-            }
+            // if(i===10){
+            //     return;
+            // }
     }
 
 
@@ -68,3 +68,38 @@ fetchCountries = async () => {
 }
 
 fetchCountries();
+
+// function filterCountries(){
+//     debugger
+//     var input = document.getElementById('search');
+//     var searchText = input.value.toLowerCase();
+
+//     var country_names = document.getElementsByTagName('h3');
+
+//     for(var i=0; i< country_names.length; i++){
+        
+//         if(country_names[i].innerText.includes(searchText)){
+//             country_names[i].parentElement.style.display = "block";
+//         }else{
+//             country_names[i].parentElement.style.display = "none";
+//         }
+//     }
+
+//     console.log(country_names);
+
+// }
+
+debugger
+const search = document.forms['input-form'].querySelector('input');
+search.addEventListener('keyup', function(e) {
+    const searchTerm = e.target.value.toLowerCase();
+    const countries = document.getElementsByTagName('h3');
+
+    Array.from(countries).forEach(function(country){
+        if(country.innerText.toLowerCase().indexOf(searchTerm)!=-1){
+            country.parentElement.style.display = "block"; 
+        }else{
+            country.parentElement.style.display = "none"; 
+        }
+    })
+})
