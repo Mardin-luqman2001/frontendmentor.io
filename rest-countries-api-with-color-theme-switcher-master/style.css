@@ -8,9 +8,25 @@
     padding: 0;
 }
 
+html[data-theme='light']{
+    --bgColor : hsl(0, 0%, 98%);
+    --headerColor: white;
+    --textColor: black;
+    --shadowColor: #dfdede;
+}
+
+html[data-theme='dark']{
+    --bgColor :  hsl(207, 26%, 17%);
+    --headerColor: hsl(209, 23%, 22%);
+    --textColor: white;
+    --shadowColor: #0e0e0e;
+}
+
 body{
     font-family: 'Nunito Sans', sans-serif;
-    background-color: var(--veryLightGray);
+    background-color: var(--bgColor);
+    color: var(--textColor);
+    transition: 0.2s;
 }
 
 .header{
@@ -21,8 +37,8 @@ body{
     align-items: center;
     justify-content:space-between;
     /* width: 95vw; */
-    background-color: white;
-    box-shadow: 10px 10px 10px -5px #dfdede;
+    background-color: var(--headerColor);
+    box-shadow: 10px 10px 10px -5px var(--shadowColor);
 }
 
 .header h2{
@@ -31,6 +47,7 @@ body{
 .dark-mode-box{
     display: flex;
     align-items: center;
+    transition: 1s;
 }
 
 .dark-mode-box p{
@@ -48,7 +65,6 @@ body{
     align-items: center;
     justify-content: space-between;
     /* background-color: yellowgreen; */
-    
 }
 
 .input-form select{
@@ -56,7 +72,9 @@ body{
     margin-top: 3em;
     padding: 1em;
     border: 0px;
-    box-shadow: 10px 10px 10px -5px #dfdede;
+    box-shadow: 10px 10px 10px -5px var(--shadowColor);
+    color: var(--textColor);
+    background-color: var(--headerColor);
 }
 
 .input-form select:focus, .input-form input:focus{
@@ -68,7 +86,13 @@ body{
     margin-left: 3em;
     padding: 1em 10em 1em 1em;
     border: 0px;
-    box-shadow: 10px 10px 10px -5px #dfdede;
+    background-color: var(--header-color);
+    color: var(--textColor);
+    box-shadow: 10px 10px 10px -5px var(--shadowColor);
+}
+
+::placeholder{
+    color: var(--textColor);
 }
 
 .flag{
@@ -76,6 +100,7 @@ body{
     height: 12rem;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
+    /* background-color: white; */
 }
 
 .countries-box{
@@ -91,9 +116,10 @@ body{
 
 .country-item{
     width: 18rem;
-    background-color: white;
+    background-color: var(--header-color);
     border-radius: 0.5rem;
-    box-shadow: 10px 10px 10px -5px #dfdede;
+    box-shadow: 10px 10px 10px -5px var(--shadowColor);
+    color: var(--textColor);
 }
 
 .country-item h3{

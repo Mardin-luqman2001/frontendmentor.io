@@ -130,3 +130,24 @@ function selectRegions(){
 
     console.log(list);
 }
+
+function toggleTheme(){
+    // alert('clicked');
+    debugger
+
+    var currentTheme = document.documentElement.getAttribute('data-theme');
+    var text = document.getElementById('dark-mode-text');
+
+    if(currentTheme === 'light'){
+        targetTheme = 'dark';
+        text.innerText = "Light Mode";
+        document.getElementsByTagName('ion-icon')[0].setAttribute('name','sunny-outline');
+    }else if(currentTheme === 'dark'){
+        targetTheme = 'light';
+        text.innerText = "Dark Mode";
+        document.getElementsByTagName('ion-icon')[0].setAttribute('name','moon-outline');
+    }
+
+    document.documentElement.setAttribute('data-theme', targetTheme);
+
+}
