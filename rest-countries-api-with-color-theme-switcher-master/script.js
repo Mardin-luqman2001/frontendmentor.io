@@ -103,3 +103,26 @@ search.addEventListener('keyup', function(e) {
         }
     })
 })
+
+function selectRegions(){
+    const list = document.getElementById('regions');
+    debugger
+
+    const selected_region = list.options[list.selectedIndex].text.toLowerCase();
+
+    const regions = document.getElementsByTagName('li');
+
+    for(var i=1; i< regions.length; i+=3){
+        if(regions[i].innerText.toLowerCase().indexOf(selected_region) != -1){
+            regions[i].parentElement.parentElement.style.display = "block";
+        }else{
+            regions[i].parentElement.parentElement.style.display = "none";
+        }
+    }
+
+    // Array.from(regions).forEach(function(region){
+        
+    // })
+
+    console.log(list);
+}
