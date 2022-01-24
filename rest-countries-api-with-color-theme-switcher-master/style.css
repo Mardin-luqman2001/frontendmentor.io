@@ -44,19 +44,24 @@ body{
 .header h2{
 }
 
-.dark-mode-box{
+.theme-box{
     display: flex;
     align-items: center;
-    transition: 1s;
+    transition: 0.5s;
 }
 
-.dark-mode-box p{
+.theme-box:hover{
+    cursor: pointer;
+}
+
+.theme-box p{
     margin-left: 0.5em;
     font-weight: 600;
 }
 
 .main{
     position: relative;
+    display: none;
     /* top: 5em; */
 }
 
@@ -75,6 +80,7 @@ body{
     box-shadow: 10px 10px 10px -5px var(--shadowColor);
     color: var(--textColor);
     background-color: var(--headerColor);
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 .input-form select:focus, .input-form input:focus{
@@ -89,6 +95,7 @@ body{
     background-color: var(--header-color);
     color: var(--textColor);
     box-shadow: 10px 10px 10px -5px var(--shadowColor);
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 ::placeholder{
@@ -122,6 +129,10 @@ body{
     color: var(--textColor);
 }
 
+.country-item:hover{
+    cursor: pointer;
+}
+
 .country-item h3{
     padding: 1rem;
 }
@@ -130,4 +141,82 @@ body{
     list-style-type: none;
     /* background-color: yellowgreen; */
     padding: 1rem;
+}
+
+.details-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 6em;
+    /* justify-items: center; */
+}
+
+.text-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.2em;
+    padding: 2em;
+}
+
+.text-grid > h3{
+    /* background-color: yellowgreen; */
+    grid-column: 1/5;
+}
+
+.text-grid > .stats {
+    background-color: rgb(79, 152, 216);
+    list-style: none;
+    grid-column: 1/5;
+    height: 200px;
+}
+
+.text-grid > .border-countries-box{
+    /* background-color: rgb(245, 145, 145); */
+    grid-column: 0.5;
+}
+
+.text-grid > p:nth-child(even) {
+    grid-column: 1/3;
+}
+
+.text-grid > p:nth-child(odd) {
+    grid-column: 3/5;
+}
+
+.text-grid > p{
+    font-weight: bold;
+}
+
+.text-grid > p > span{
+    font-weight:normal;
+}
+
+.details-flag{
+    align-self: center;
+    justify-self: center;
+}
+
+.details-flag > img {
+    width: 30rem;
+}
+
+.neighboring-countries{
+    grid-column: 2/3;
+    /* grid-row: 4/5; */
+}
+
+.neighboring-countries{
+    list-style: none;
+    display: flex;
+    gap: 1em;
+}
+
+.border-countries-box{
+    font-weight: bold;
+}
+
+.neighboring-countries > li {
+    border: 2px solid #efefef;
+    border-radius: 2px;
+    padding: 0.25em 1em;
+    align-self: center;
 }

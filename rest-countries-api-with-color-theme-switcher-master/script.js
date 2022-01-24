@@ -2,6 +2,7 @@ fetchCountries = async () => {
     const response = await fetch('https://restcountries.com/v2/all');
     const myJson = await response.json(); //extract JSON from the http response
     console.log(myJson);
+    localStorage['jsonData'] = JSON.stringify(myJson);
 
     debugger
 
@@ -32,6 +33,10 @@ fetchCountries = async () => {
         div.appendChild(img);
         div.appendChild(h3);
         div.appendChild(ul);
+
+        div.addEventListener('click',function(e){
+            displayCountryDetails(e, myJson);
+        })
     
         var c_box = document.querySelector('#countries-box');
         c_box.appendChild(div);
@@ -67,7 +72,7 @@ fetchCountries = async () => {
 
 }
 
-fetchCountries();
+// fetchCountries();
 
 // function filterCountries(){
 //     debugger
@@ -150,4 +155,30 @@ function toggleTheme(){
 
     document.documentElement.setAttribute('data-theme', targetTheme);
 
+}
+
+
+function displayCountryDetails(e, myJson){
+    // window.open("https://www.w3schools.com");
+    console.log(myJson);
+    // localStorage['jsonData'] = myJson;
+
+    var main = document.getElementsByClassName('main');
+
+    debugger
+    if(e.target.tagName === "IMG" || e.target.tagName === "H3" || e.target.tagName === "UL"){
+        var parent = e.target.parentElement;
+        var children = parent.children;
+        // console.log("JSON"+ myJson);
+        main[0].style.display = "none";
+        // window.open("details.html");
+        // alert(children[1].innerText)
+    }else if(e.target.tagName === "LI"){
+        var parent = e.target.parentElement.parentElement;
+        var children = parent.children;
+        main[0].style.display = "none";
+        // window.open("details.html");
+        // alert(children[1].innerText)
+    }   
+    
 }
