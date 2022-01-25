@@ -46,53 +46,10 @@ fetchCountries = async () => {
         // }
     }
 
-
-    // do something with myJson
-
-    // var c_name = document.querySelectorAll('#country-item')[0].children[1];
-    // c_name.textContent = "pode dei";
-
-    // const div = document.createElement('div');
-    // div.classList.add('country-item');
-
-    // const img = document.createElement('img');
-    // img.classList.add('flag');
-
-    // const h3 = document.createElement('h3');
-    // // const ul = document.createElement('ul');
-
-    // div.appendChild(img);
-    // div.appendChild(h3);
-
-    // var c_box = document.querySelector('#countries-box');
-    // c_box.appendChild(div);
-
     console.log(c_box);
-
-
 }
 
 fetchCountries();
-
-// function filterCountries(){
-//     debugger
-//     var input = document.getElementById('search');
-//     var searchText = input.value.toLowerCase();
-
-//     var country_names = document.getElementsByTagName('h3');
-
-//     for(var i=0; i< country_names.length; i++){
-
-//         if(country_names[i].innerText.includes(searchText)){
-//             country_names[i].parentElement.style.display = "block";
-//         }else{
-//             country_names[i].parentElement.style.display = "none";
-//         }
-//     }
-
-//     console.log(country_names);
-
-// }
 
 debugger
 const search = document.forms['input-form'].querySelector('input');
@@ -129,10 +86,6 @@ function selectRegions() {
         }
     }
 
-    // Array.from(regions).forEach(function(region){
-
-    // })
-
     console.log(list);
 }
 
@@ -159,21 +112,11 @@ function toggleTheme() {
 
 
 function displayCountryDetails(e, myJson) {
-    // window.open("https://www.w3schools.com");
-    console.log(myJson);
-    // localStorage['jsonData'] = myJson;
+    
+    // console.log(myJson);
 
     var main = document.getElementsByClassName('main');
     var section = document.getElementsByClassName('details-section');
-
-    var nativeName = document.getElementsByClassName('native-name')[0];
-    var region = document.getElementsByClassName('region');
-    var capital = document.getElementsByClassName('capital');
-    var currencies = document.getElementsByClassName('currencies');
-    var population = document.getElementsByClassName('population');
-    var subRegion = document.getElementsByClassName('sub-region');
-    var tld = document.getElementsByClassName('tld');
-    var languages = document.getElementsByClassName('languages');
 
     debugger
     if (e.target.tagName === "IMG" || e.target.tagName === "H3" || e.target.tagName === "UL") {
@@ -185,15 +128,6 @@ function displayCountryDetails(e, myJson) {
 
         setData(myJson, children, section, false);
 
-        // for(var i=0; i<myJson.length; i++){
-        //     if(myJson[i].name.toLowerCase() === children[1].innerText.toLowerCase()){
-        //         section[0].querySelectorAll('h3')[0].innerText = myJson[i].name;
-        //     }
-        // }
-        // section[0].querySelectorAll('h3')[0].innerText = 
-
-        // window.open("details.html");
-        // alert(children[1].innerText)
     } else if (e.target.tagName === "LI") {
         var parent = e.target.parentElement.parentElement;
         var children = parent.children;
@@ -202,13 +136,6 @@ function displayCountryDetails(e, myJson) {
 
         setData(myJson, children, section, false);
 
-        // for(var i=0; i<myJson.length; i++){
-        //     if(myJson[i].name.toLowerCase() === children[1].innerText.toLowerCase()){
-        //         section[0].querySelectorAll('h3')[0].innerText = myJson[i].name;
-        //     }
-        // }
-        // window.open("details.html");
-        // alert(children[1].innerText)
     }
 }
 
