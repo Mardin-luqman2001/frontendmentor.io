@@ -214,6 +214,8 @@ function displayCountryDetails(e, myJson) {
 
 function setData(myJson, children, section, recursion) {
     debugger
+    var textgrid = document.getElementsByClassName('text-grid');
+    textgrid[0].style.display = "grid";
     for (var i = 0; i < myJson.length; i++) {
         if (myJson[i].name.toLowerCase() === (recursion ? children.toLowerCase() : children[1].innerText.toLowerCase())) {
             section[0].querySelectorAll('h3')[0].innerText = myJson[i].name;
