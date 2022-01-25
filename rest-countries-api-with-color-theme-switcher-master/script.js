@@ -179,15 +179,17 @@ function setData(myJson, children, section, recursion) {
                         }
                     }
                 }
+            }else{
+                nearbyCountries.push("I do not have any borders!");
             }
             
 
             const ul = document.getElementById('neighboring-countries')
             ul.innerHTML = '';
 
-            if(nearbyCountryCodes.length === 0) {
-                return;
-            }
+            // if(nearbyCountryCodes.length === 0) {
+            //     return;
+            // }
 
             for (var j = 0; j < nearbyCountries.length; j++) {
                 var li = document.createElement('li');
