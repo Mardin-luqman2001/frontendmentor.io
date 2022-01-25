@@ -14,6 +14,7 @@ fetchCountries = async () => {
         const img = document.createElement('img');
         img.classList.add('flag');
         img.setAttribute('src', myJson[i].flag);
+        img.setAttribute('alt', "flag-img");
 
         const h3 = document.createElement('h3');
         h3.textContent = myJson[i].name;
@@ -147,6 +148,7 @@ function setData(myJson, children, section, recursion) {
         if (myJson[i].name.toLowerCase() === (recursion ? children.toLowerCase() : children[1].innerText.toLowerCase())) {
             section[0].querySelectorAll('h3')[0].innerText = myJson[i].name;
             section[0].querySelectorAll('img')[0].src = myJson[i].flag;
+            section[0].querySelectorAll('img')[0].alt = "flag-image";
             section[0].querySelectorAll('.native-name')[0].innerText = myJson[i].nativeName;
             section[0].querySelectorAll('.region')[0].innerText = myJson[i].region;
             if(myJson[i] && myJson[i].capital){
