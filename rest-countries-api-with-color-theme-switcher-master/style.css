@@ -36,7 +36,7 @@ body{
     padding: 2em;
     align-items: center;
     justify-content:space-between;
-    /* width: 95vw; */
+
     background-color: var(--headerColor);
     box-shadow: 10px 10px 10px -5px var(--shadowColor);
 }
@@ -58,15 +58,14 @@ body{
 
 .main{
     position: relative;
-    /* display: none; */
-    /* top: 5em; */
+  
 }
 
 .input-form{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* background-color: yellowgreen; */
+
 }
 
 .input-form select{
@@ -104,7 +103,7 @@ body{
     height: 12rem;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
-    /* background-color: white; */
+
 }
 
 .countries-box{
@@ -136,7 +135,7 @@ body{
 
 .country-item ul{
     list-style-type: none;
-    /* background-color: yellowgreen; */
+  
     padding: 1rem;
 }
 
@@ -144,7 +143,6 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-top: 3em;
-    /* justify-items: center; */
 }
 
 .text-grid{
@@ -155,7 +153,7 @@ body{
 }
 
 .text-grid > h3{
-    /* background-color: yellowgreen; */
+   
     grid-column: 1/5;
 }
 
@@ -167,7 +165,7 @@ body{
 }
 
 .text-grid > .border-countries-box{
-    /* background-color: rgb(245, 145, 145); */
+   
     grid-column: 0.5;
 }
 
@@ -198,7 +196,6 @@ body{
 
 .neighboring-countries{
     grid-column: 2/3;
-    /* grid-row: 4/5; */
 }
 
 .neighboring-countries{
